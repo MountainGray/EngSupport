@@ -20,7 +20,6 @@ Cheat sheet + explanations for 254 midterm
 
 -
 -
-- ***
 
 ## Summarizing Data + Graphs
 
@@ -45,7 +44,7 @@ If two variables are related, one may be defined as the **explanatory** variable
 
 ### Data Collection
 
----
+***
 
 ## Probability
 
