@@ -1,29 +1,48 @@
-# Midterm Note Review
+# 254 Notes
 
-Cheat sheet + explanations for 254 midterm
+A comprehensive document of all my notes during 254
+
+This includes formulas, short explanations, what ever is helpful for review and comprehension
 
 ## Overview
 
-### Summarizing Data + _Graphs_
+Summarizing Data + _Graphs_ (not added yet)
 
 - Types of Data
 - Data Collection Methods
 - Graphing Methods
 
-### Probability (Part 1-5)
+R Code + Simulink (Not added yet)
+
+- R sucks
+- :(
+
+Probability
 
 - Definitions
 - Notation
 - Rules + Equations
 
-### R Code + Simulink
+Probability Distributions
 
--
--
+- Formulas
+- Breif explanations
 
-## Summarizing Data + Graphs
+Foundations of Inference
 
-### Variable types
+- Formulas
+
+Linear Regression
+
+- Formulas
+
+Measurement and Instrumentation
+
+-Breif notes on what was covered
+
+## Summarizing Data+ _Graphs_
+
+Variable types
 
 - Numerical
   - Continuous: Numerical Values that exist on a continuous range of values
@@ -32,13 +51,13 @@ Cheat sheet + explanations for 254 midterm
   - Regular Categorical: Category's that cannot be ordered
   - ordinal: Categories with logical ordering (ex. Grade Level)
 
-### Variable Relationships
+Variable Relationships
 
 Variables can be either **dependant** or **independent** of each other.
 
 If a variable is dependent on another variable, the dependency can be either positively associated or negatively associated. With a positive association, an increase in one variable equals an increase in the other, and the opposite occurring for negative associativity.
 
-#### Explanatory Variables
+Explanatory Variables
 
 If two variables are related, one may be defined as the **explanatory** variable, and the other/s as **response** variable/s. The explanatory variable drives the value of the response variable, its a causal relationship. This relationship needs to be determined, since there is a possibility that both variables you are observing are both response variables to a different data point.
 
@@ -105,11 +124,11 @@ $$\sigma^2=Var(aX+bY)=a^2\times Var(X)+b^2\times Var(Y)$$
 
 ### Notation
 
-#### Probability Notation
+- Probability Notation
 
 $P(A)=$ The probability of event A occurring
 
-#### Basic Set Theory
+- Basic Set Theory
 
 Element: $x\in S$ Means that $x$ is in the set $S$
 
@@ -127,8 +146,6 @@ Disjoint: $A \cap B= \emptyset$, formula to show no common elements
 
 Difference: $A - B$ signifies the set of elements in $A$ that are not in $B$
 
-[Set Example](../Set-venn-diagrams.png/)
-
 ### Rules and Equations
 
 #### Addition Rule
@@ -141,19 +158,17 @@ $$P(A\ or\ B) = P(A)+P(B) -P(A\ and\ B)$$
 
 #### Multiplication Rule
 
-##### For Independent Processes
+For _Independent_ Processes
 
 $$ P(A\ and\ B)=P(A) \times P(B)$$
 
 **Note:** $A$ and $B$ must be two independent processes
 
-##### General Rule
+General Rule for *both* dependant and independend processes
 
 $$P(A\ and\ B) =P(A|B)\times P(B)$$
 
-Note: This is for events that we believe are not independent, otherwise this is rearranged to the previous equation above
-
-##### For Three Events
+For Three Events
 
 $$P(A\ and\ (B\ and\ C))=P(A|(B\ and\ C))\times P(B\ and\ C)$$
 
@@ -225,21 +240,17 @@ $$E(aX+bY)=a\cdot E(X)+b\cdot E(Y)$$
 
 $$\sigma^2=Var(aX+bY)=a^2\times Var(X)+b^2\times Var(Y)$$
 
-### Probability Distributions
+## Probability Distributions
 
-#### Probability Distributions of Random Variables
+Probability Distributions of Random Variables represent the values of a Random variable and the likelihood of those values
 
-Represent the values of a Random variable and the likelihood of those values
-
-#### Normal Distributions
-
-(Insert picture of normal distribution)
+### Normal Distributions
 
 The normal distribution is denoted as $N(\mu , \sigma)$ where $\mu$ is the mean of the distribution, and $\sigma$ is the standard deviation.
 
 #### Z Scores
 
-A Z Score quantifies the number of standard deviations from the mean a value is in a distribution
+A Z Score quantifies the number of standard deviations from the mean a value is in a normal distribution
 
 $$Z={x-\mu \over \sigma}={observation - mean \over SD}$$
 
@@ -257,7 +268,7 @@ This can be called _"empirical quantiles"_, since it empirically evaluates the p
 
 $p_i$ evaluates to a probability, you then use this value to calculate the Z Score of each data point and plot data point vs Z value, the closer to a linear distribution the data is, the more linear the data plot is.
 
-#### Bernoulli Trial
+### Bernoulli Trial
 
 with two possible outcomes (success and failure)
 
@@ -265,7 +276,7 @@ $p=P($success on one trial$)$
 
 $q=1-p=P($failure on one trial$)$
 
-##### Bernoulli Random Variable
+#### Bernoulli Random Variable
 
 A Bernoulli Variable can only take on two values, 1 and 0. It is the output of a Bernoulli Trial
 
@@ -289,11 +300,11 @@ And the standard deviation is
 
 $$\sigma = \sqrt{1-p\over p^2}$$
 
-#### Combinatorics
+### Combinatorics
 
 Combinatorics is an area of math concerning counting
 
-##### Rule 1: Multiplication
+#### Rule 1: Multiplication
 
 For a set of events where:
 
@@ -306,7 +317,7 @@ The total number of combinations of each event is
 
 $k=n_1\cdot n_2\cdot ... \cdot n_k$
 
-##### Rule 2: Permutations
+#### Rule 2: Permutations
 
 The number of permutations of a set defines the number of unique combinations of length $k$ including unique orders that the set $n$ can create
 
@@ -316,15 +327,15 @@ if k=n then
 
 $$(n)_n=n!$$
 
-##### Rule 3: Combinations
+#### Rule 3: Combinations
 
 The number of combinations is defined as the number of unique unordered subsets of a set, this can also be viewed as number of permutations regardless of order
 
 $$(^n_k)={(n)_k\over k}={n!\over k!(n-k)!}$$
 
-### Inference
+## Foundations of Inference
 
-#### Central Limit Theorem
+### Central Limit Theorem
 
 The distribution of a **sample mean** is well approximated by a normal distribution if: the events are independent, and the sample size is appropriate
 
@@ -332,20 +343,45 @@ $\bar{x}\approx N(\mu , {\sigma \over \sqrt{n}})$
 
 ${\sigma \over \sqrt{n}}$ is the standard error or $SE$
 
-#### Confidence Intervals
+### Confidence Intervals
 
 $\bar{x}\pm Z^*\times SE= ({x_1},{x_2})$ Z is the 'Z score' we want to get (% likely within from table)
 
 Z = 2 for 95% confidence that a mean is within interval
 
-#### Margin of Error
+### Margin of Error
 
 In a confidence interval $Z^*\times SE$ is the **Margin of error**
 
-#### p-value
+### p-value
 
 to find p-value you must first find the # of Standard Error away from the sample mean the null hypothesis is
 
 $Z={\bar{x}-\mu_{0} \over SE}={\bar{x}-\mu_{0} \over {s/\sqrt{n}}}$ (s - sample variance, SE - Sample Error, n - sample size)
 
 The p(x) is then calculated by looking at the table and finding the corresponding % chance that this variable would be observed
+
+## linear Regression
+
+Linear regression represents the task of fitting a line to a series of data, to model the system as a 'linear' function
+
+$y = \beta_0+\beta_1 x +\in$
+
+Model perameters=$\beta_0, \beta_1$
+
+Explanatory variable: $x$
+
+Response variable: $y$
+
+Error: $\in$
+
+
+### Residuals
+
+Residulas are the error from a model fit
+
+$e_i=y_i-\hat{y_i}$
+
+Residual: e_i,
+Measured data: $y_i$,
+Predicted data: $\hat{y_i}$
